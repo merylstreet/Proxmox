@@ -287,7 +287,7 @@ pvesm alloc $STORAGE $VMID $DISK0 64M 1>&/dev/null
 qm importdisk $VMID ${FILE%.*} $STORAGE ${DISK_IMPORT:-} 1>&/dev/null
 qm set $VMID \
   -efidisk0 ${DISK0_REF},efitype=4m,size=64M \
-  -scsi0 ${DISK1_REF},size=32G >/dev/null
+  -scsi0 ${DISK1_REF},size=16G >/dev/null
 qm set $VMID \
   -boot order=scsi0 >/dev/null
 qm set $VMID -description "# PiMox HAOS
